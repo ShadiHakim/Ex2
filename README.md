@@ -138,3 +138,9 @@ directed_weighted_graph graph  //Pointer of the graph, that all the functions wi
 | `load(String file)` | | retrieve the graph from a JSON file returns true if success |
 
 ----
+
+## Used Libraries
+
+* [GraphStream (gs-core)](https://github.com/graphstream/gs-core)
+* [GraphStream (gs-ui-swing)](https://github.com/graphstream/gs-ui-swing)
+* [Jackson](https://github.com/FasterXML/jackson)
