@@ -274,6 +274,13 @@ public class MyUtil {
         return res;
     }
 
+    /**
+     * This function map the value that will be added and the pokemons on the path
+     * @param graph - The graph
+     * @param path - List of nodes that are connected (path)
+     * @param pokemonList - All the pokemons at one moment on the graph
+     * @return A map representing the sum of all the value of the Pokemons of the path to the Pokemons on the path
+     */
     public static Map<Double,List<CL_Pokemon>> path_by_pokemon_value(directed_weighted_graph graph, List<node_data> path, List<CL_Pokemon> pokemonList){
         Map<Double,List<CL_Pokemon>> res = new HashMap<>();
         Double value = 0.0;
@@ -291,6 +298,13 @@ public class MyUtil {
         return res;
     }
 
+    /**
+     * This function map the value that will be added and the pokemons on the path (and if on opposite edges)
+     * @param graph - The graph
+     * @param path - List of nodes that are connected (path)
+     * @param pokemonList - All the pokemons at one moment on the graph
+     * @return A map representing the sum of all the value of the Pokemons of the path to the Pokemons on the path
+     */
     public static Map<Double,List<CL_Pokemon>> path_by_pokemon_value_planB(directed_weighted_graph graph, List<node_data> path, List<CL_Pokemon> pokemonList){
         Map<Double,List<CL_Pokemon>> res = new HashMap<>();
         Double value = 0.0;
@@ -309,6 +323,14 @@ public class MyUtil {
         return res;
     }
 
+    /**
+     * This is the main function in which it compute and return the best next move at the moment
+     * based on different strategies
+     * @param graph - The graph
+     * @param agent - The agent that will be computing on
+     * @param pokemons - The pokmons on the graph at the moment
+     * @return
+     */
     public static int best_next_move_for_agent(directed_weighted_graph graph, CL_Agent agent, List<CL_Pokemon> pokemons) {
         int dest = -1;
         List<CL_Pokemon> dest_Pokemons = new ArrayList<>();
@@ -454,5 +476,4 @@ public class MyUtil {
 
         return dest;
     }
-    //TODO If oneway edge
 }

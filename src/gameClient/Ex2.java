@@ -67,7 +67,7 @@ public class Ex2 implements Runnable{
         game = Game_Server_Ex2.getServer(scenario_num); // you have [0,23] games
         ui_graph = new MultiGraph("scenario_num:" + scenario_num);
 
-//        game.login(ID);
+        game.login(ID);
 
         String g = game.getGraph();
         String fs = game.getPokemons();
@@ -181,8 +181,7 @@ public class Ex2 implements Runnable{
     }
 
     /**
-     * Moves each of the agents along the edge,
-     * in case the agent is on a node the next destination (next edge) is chosen (randomly).
+     * Moves each of the agents along the edge.
      * @param
      */
     private void moveAgents() {
@@ -221,7 +220,7 @@ public class Ex2 implements Runnable{
     }
 
     /**
-     * a very simple random walk implementation!
+     * a very simple walk implementation!
      * @param agent
      * @return
      */
