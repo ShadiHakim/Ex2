@@ -16,6 +16,11 @@ run the following command
 
 To run the project using **GUI(Graphical User Interface)** just open the directory of Ex2 and run Ex2.jar.
 
+### Documentation
+For thorough documentation please check the link below:
+
+https://shadihakim.github.io/Ex2/
+
 ## Data structure
 
 #### DWGraph_DS
