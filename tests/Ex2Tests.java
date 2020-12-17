@@ -104,6 +104,7 @@ public class Ex2Tests {
 
         dw_graph_algorithms weightedGraphAlgorithms = new DWGraph_Algo();
         weightedGraphAlgorithms.init(g);
+        weightedGraphAlgorithms.shortestPath(0,5);
         assertEquals(3,weightedGraphAlgorithms.shortestPath(0,2).size());
         double sh = weightedGraphAlgorithms.shortestPathDist(1,0);
         assertEquals(4.0,sh);
