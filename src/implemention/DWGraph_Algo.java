@@ -199,7 +199,7 @@ public class DWGraph_Algo implements dw_graph_algorithms {
         List<node_data> path = new ArrayList<>();
         // building the path from dest to src
         node_data at = graph.getNode(dest);
-        for (; dwhelper.get(at).get_ckey() != null && at.getKey() != src; at = graph.getNode(dwhelper.get(at).get_ckey()))
+        for (; at != null && dwhelper.get(at).get_ckey() != null && at.getKey() != src; at = graph.getNode(dwhelper.get(at).get_ckey()))//TODO CRITICAL BUG FIX NOW
             path.add(at);
         if (at != null)
             path.add(at);
@@ -274,7 +274,7 @@ public class DWGraph_Algo implements dw_graph_algorithms {
         List<node_data> path = new ArrayList<>();
         // building the path from dest to src
         node_data at = graph.getNode(dest);
-        for (; dwhelper.get(at).get_ckey() != null && at.getKey() != src; at = graph.getNode(dwhelper.get(at).get_ckey()))
+        for (; at != null && dwhelper.get(at).get_ckey() != null && at.getKey() != src; at = graph.getNode(dwhelper.get(at).get_ckey()))
             path.add(at);
         if (at != null)
             path.add(at);
